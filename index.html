@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --background-start-rgb: 4, 11, 22;
+            --background-end-rgb: 12, 20, 43;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+            color: white;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3b82f6;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .radial-gradient-tl {
+            background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 40%);
+        }
+        .radial-gradient-br {
+            background: radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 40%);
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+<div class="fixed inset-0 radial-gradient-tl"></div>
+<div class="fixed inset-0 radial-gradient-br"></div>
+<nav class="p-6 flex justify-between items-center fixed w-full top-0 z-50 glass-effect">
+<div class="text-3xl font-bold tracking-wider">PORTFOLIO</div>
+<div class="space-x-10 text-lg">
+<a class="nav-link active" href="#about">About</a>
+<a class="nav-link" href="#projects">Projects</a>
+<a class="nav-link" href="#achievements">Achievements</a>
+<a class="nav-link" href="#contact">Contact</a>
+</div>
+</nav>
+<main class="pt-32 container mx-auto px-6 relative z-10">
+<section class="text-center py-16" id="hero">
+<img alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJyjkRWyae0y7WRRF3x6VHFND2cVieXffAp4cUMpPJIOQNIK0Ln2gNFsX0_A0DbmmolTmA7ceQRBt4moLUagRlJZY2RV-wNRfTBPoOPXkFQbvJegX5Ymga-Avio0j8m8YtwHlNSJ8M8fIJDmp79Uiq3Q8EaIvO7Lub1C-vW71bLI8YC4I1Mx8vIOFbLrLb2bcmIx6CQEMd_t2pez0Tm9MIU76CXyXdq2fkMM6x6TQHqOXoGDGFa80VCQFpQk2pSnBtT4iR8jycTb1B"/>
+<h1 class="text-7xl font-extrabold mb-4 leading-tight">Marketing &amp; Tech <br/>Innovator</h1>
+<p class="text-2xl text-blue-300 mb-4">MBA Student | DevOps Engineer</p>
+<p class="max-w-3xl mx-auto text-lg text-gray-300">
+                Bridging the gap between technology and business with a creative and analytical mindset. Passionate about leveraging cutting-edge tech to solve marketing challenges.
+            </p>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="lg:col-span-3 p-8 rounded-3xl glass-effect transition-all duration-300 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10" id="about">
+<h2 class="text-4xl font-bold mb-6">About Me</h2>
+<p class="text-lg text-gray-300 leading-relaxed">
+                    I am a driven MBA student with a solid background as a DevOps Engineer. My journey has equipped me with a unique blend of technical expertise and strategic business acumen. I am passionate about leveraging technology to solve complex marketing challenges and drive business growth. My goal is to create innovative solutions that are not only technologically sound but also market-savvy. I thrive in dynamic environments and am committed to continuous learning and improvement.
+                </p>
+</div>
+<div class="p-8 rounded-3xl glass-effect flex flex-col justify-center items-center text-center transition-all duration-300 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10">
+<h3 class="text-7xl font-bold text-blue-400">5+</h3>
+<p class="text-lg mt-2 text-gray-300">Years of Experience</p>
+</div>
+<div class="lg:col-span-4 p-8 rounded-3xl glass-effect transition-all duration-300 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10" id="projects">
+<h2 class="text-4xl font-bold mb-8 text-center">Projects &amp; Case Studies</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition duration-300 transform hover:-translate-y-1">
+<h3 class="text-xl font-semibold mb-2 text-blue-300">Project A: Cloud Migration</h3>
+<p class="text-gray-300">Led a successful cloud migration project, improving scalability and reducing operational costs by 30%.</p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition duration-300 transform hover:-translate-y-1">
+<h3 class="text-xl font-semibold mb-2 text-blue-300">Project B: CI/CD Pipeline</h3>
+<p class="text-gray-300">Designed and implemented a CI/CD pipeline, accelerating development cycles by 50% and improving code quality.</p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition duration-300 transform hover:-translate-y-1">
+<h3 class="text-xl font-semibold mb-2 text-blue-300">Case Study: Market Entry</h3>
+<p class="text-gray-300">Developed a comprehensive market entry strategy for a new SaaS product, resulting in a 15% market share within the first year.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 p-8 rounded-3xl glass-effect transition-all duration-300 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10" id="achievements">
+<h2 class="text-4xl font-bold mb-6">Achievements</h2>
+<ul class="space-y-4 text-lg">
+<li class="flex items-start">
+<svg class="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-gray-300">Top Performer Award 2021</span>
+</li>
+<li class="flex items-start">
+<svg class="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-gray-300">Published in 'Future of Tech' Journal</span>
+</li>
+<li class="flex items-start">
+<svg class="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-gray-300">Recipient of the 'Innovator's MBA Scholarship'</span>
+</li>
+</ul>
+</div>
+<div class="lg:col-span-2 p-8 rounded-3xl glass-effect transition-all duration-300 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10">
+<h2 class="text-4xl font-bold mb-6">Core Skills</h2>
+<div class="flex flex-wrap gap-3">
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">Digital Marketing</span>
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">SEO/SEM</span>
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">Market Research</span>
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">AWS</span>
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">Docker</span>
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">Kubernetes</span>
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+<span class="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium">Agile Methodologies</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-24 py-12 glass-effect" id="contact">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+<p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to connect, feel free to reach out!</p>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full transition duration-300 text-lg inline-block transform hover:scale-105" href="mailto:email@example.com">Contact Me</a>
+<div class="flex justify-center space-x-8 mt-10">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><svg aria-hidden="true" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.735 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.578.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path></svg></a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><svg aria-hidden="true" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 6.83c-.78.35-1.62.58-2.5.68a4.37 4.37 0 001.9-2.4 8.7 8.7 0 01-2.75 1.05c-.73-.78-1.77-1.27-2.92-1.27-2.21 0-4 1.79-4 4 0 .31.04.62.11.91-3.32-.17-6.27-1.76-8.25-4.18-.34.59-.54 1.28-.54 2.02 0 1.39.71 2.62 1.78 3.33-.66-.02-1.28-.2-1.82-.5v.05c0 1.94 1.38 3.56 3.22 3.93-.34.09-.69.14-1.06.14-.26 0-.51-.03-.76-.07.51 1.59 2 2.74 3.78 2.77a8.79 8.79 0 01-5.45 1.88c-.35 0-.7-.02-1.04-.06 1.79 1.15 3.92 1.82 6.23 1.82 7.47 0 11.55-6.19 11.55-11.55 0-.18 0-.35-.01-.52.8-.57 1.49-1.29 2.04-2.12z"></path></svg></a>
+</div>
+<p class="mt-10 text-gray-500">© 2024 MyPortfolio. All Rights Reserved.</p>
+</div>
+</footer>
+
+</body></html>
